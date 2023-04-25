@@ -6,6 +6,8 @@ import yaml
 import numpy as np
 import torch
 
+sys.path.append(os.getcwd())
+
 from utils import (
     command_parser,
     dict2namespace,

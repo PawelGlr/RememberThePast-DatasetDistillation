@@ -5,8 +5,7 @@ import torch.nn.functional as F
 
 from torch.utils.data import Dataset
 from torchvision      import datasets, transforms
-from models.networks  import ConvNet, AlexNet, ResNet12
-
+from models.networks import ConvNet, AlexNet, ResNet12, ResNet34, ResNet18, ResNet18BN_AP
 
 
 def get_default_convnet_setting():
