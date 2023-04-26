@@ -115,7 +115,7 @@ def train(rank, world_size, config, args):
                                                                   test_n_classes,
                                                                   print_info=rank==0
                                                               )
-    test_loader = torch.utils.data.DataLoader(dst_test, batch_size=256, shuffle=False, num_workers=2)
+    test_loader = torch.utils.data.DataLoader(dst_test, batch_size=16, shuffle=False, num_workers=2)
 
     args.task_sampler_nc = min(args.task_sampler_nc, train_n_classes)
 

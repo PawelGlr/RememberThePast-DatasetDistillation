@@ -673,8 +673,8 @@ def get_dataset(dataset, data_path, zca=False, manual_size=None, use_val=True, v
         im_size = (96, 96)
         train_num_classes = 2
         test_num_classes = 2
-        mean = [178.968169, 137.275527, 177.857826]
-        std = [60.045130, 71.572914, 54.662510]
+        mean = [178.968169/255, 137.275527/255, 177.857826/255]
+        std = [60.045130/255, 71.572914/255, 54.662510/255]
         transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(mean=mean, std=std)])
         dst_train = datasets.PCAM(data_path, split="val", download=True, transform=transform)  # no augmentation
         dst_test = datasets.PCAM(data_path, split="test", download=True, transform=transform)
